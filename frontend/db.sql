@@ -16,7 +16,7 @@ CREATE TABLE api_keys (
     id         INT AUTO_INCREMENT PRIMARY KEY,
     name       VARCHAR(50) NOT NULL,        -- contoh. "Frontend App", "Mobile App"
     token      CHAR(64) NOT NULL UNIQUE,    -- 256-bit random token
-    rate_limit INT DEFAULT 20,             -- max submissions per hour
+    rate_limit INT DEFAULT 20,             -- max submissions per jam
     last_used  DATETIME NULL,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB;

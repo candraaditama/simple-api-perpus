@@ -70,7 +70,7 @@ $count = $stmt->fetchColumn();
 
 if ($count >= $apiKey['rate_limit']) {
     http_response_code(429);
-    echo json_encode(['error' => 'Rate limit exceeded. Try again in 1 hour.']);
+    echo json_encode(['error' => 'Rate limit tercapai, coba kembali dalam 1 jam.']);
     exit;
 }
 
